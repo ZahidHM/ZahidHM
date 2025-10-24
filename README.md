@@ -68,3 +68,9 @@
 
 ---
 
+<div align="center"> <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/> <pre> ╔══════════════════════════════════════════════════╗ ║ > INITIALIZING COMMUNICATION CHANNELS... ║ ║ > LINK STATUS: STABLE_ ║ ╚══════════════════════════════════════════════════╝ </pre> <a href="mailto:zahidhernandezmejia@gmail.com" target="_blank"> <img src="https://img.shields.io/badge/EMAIL-00F7F7?style=for-the-badge&logo=gmail&logoColor=0D1117&labelColor=00F7F7" alt="Email"/> </a> <a href="https://www.linkedin.com/in/zahidhernandezmejia" target="_blank"> <img src="https://img.shields.io/badge/LINKEDIN-00F7F7?style=for-the-badge&logo=linkedin&logoColor=0D1117&labelColor=00F7F7" alt="LinkedIn"/> </a> <a href="https://github.com/ZahidHM" target="_blank"> <img src="https://img.shields.io/badge/GITHUB-00F7F7?style=for-the-badge&logo=github&logoColor=0D1117&labelColor=00F7F7" alt="GitHub"/> </a> <a href="https://portfolio.zahid.dev" target="_blank"> <img src="https://img.shields.io/badge/PORTFOLIO-00F7F7?style=for-the-badge&logo=vercel&logoColor=0D1117&labelColor=00F7F7" alt="Portfolio"/> </a>
+
+<br><br>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=2000&color=00F7F7&center=true&vCenter=true&width=650&lines=SYSTEM+READY+FOR+NEW+CONNECTIONS;TRANSMISSION+SECURE;AWAITING+NEXT+COMMAND..." alt="Contact Animation" /> <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/> </div>
+
