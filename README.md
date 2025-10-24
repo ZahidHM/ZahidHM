@@ -68,7 +68,9 @@
 
 ---
 
-<div align="center"> <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/> 
+<div align="center" style="border:4 "> 
+  
+  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/> 
   
   <a href="mailto:zahidhernandezmejia@gmail.com" target="_blank"> <img src="https://img.shields.io/badge/EMAIL-00F7F7?style=for-the-badge&logo=gmail&logoColor=0D1117&labelColor=00F7F7" alt="Email"/> </a> <a href="https://www.linkedin.com/in/zahidhernandezmejia" target="_blank"> 
   
