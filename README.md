@@ -3,12 +3,15 @@
 # ▂▃▅▇█▓▒░ Zahid Hernandez Mejia ░▒▓█▇▅▃▂
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=00F7F7&center=true&vCenter=true&width=940&lines=FULL+STACK+DEVELOPER;BUILDING+THE+DIGITAL+FRONTIER;END+OF+LINE" alt="Typing SVG" />
+```
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
 ║   > SYSTEM ONLINE_                                        ║
 ║   > INITIALIZING PROTOCOLS...                             ║
 ║   > ACCESS GRANTED                                        ║
-║                                                           ║╚══════════════════════════════════════════════════╝
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+```
 
 </div>
 
