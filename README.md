@@ -19,11 +19,11 @@
 
 ---
 
-## ⚡ CORE SYSTEMS
+## ⚡ LANGUAGES & TECHNOLOGIES
 
 <div align="center">
 
-### 『 FRONTEND GRID 』
+### 『 FRONTEND 』
 
 <img src="https://skillicons.dev/icons?i=react,ts,js,tailwind,css" alt="Frontend Technologies" />
 
@@ -35,7 +35,7 @@
 | **Tailwind CSS** | `ONLINE` | Utility Framework |
 | **CSS** | `ONLINE` | Style Engine |
 
-### 『 MOBILE MATRIX 』
+### 『 MOBILE 』
 
 <img src="https://skillicons.dev/icons?i=react" alt="React Native" />
 
@@ -43,7 +43,7 @@
 |--------|--------|----------|
 | **React Native** | `ONLINE` | Cross-Platform Mobile |
 
-### 『 BACKEND INFRASTRUCTURE 』
+### 『 BACKEND 』
 
 <img src="https://skillicons.dev/icons?i=nodejs,laravel" alt="Backend Technologies" />
 
