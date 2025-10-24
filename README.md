@@ -79,5 +79,6 @@
 
 <br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=2000&color=00F7F7&center=true&vCenter=true&width=650&lines=SYSTEM+READY+FOR+NEW+CONNECTIONS;TRANSMISSION+SECURE;AWAITING+NEXT+COMMAND..." alt="Contact Animation" /> <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/> </div>
+
+<img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/> </div>
 
