@@ -67,30 +67,32 @@
 </div>
 
 ---
+<div align="center">  
+  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/>  
+</div>
+
+<br/>
 
 <div align="center">
 
-  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg" width="100%" alt="neon line"/> 
+  <!-- Primera fila -->
+  <a href="mailto:zahidhernandezmejia@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/EMAIL-00F7F7?style=for-the-badge&logo=gmail&logoColor=0D1117&labelColor=00F7F7" alt="Email"/>
+  </a>
+  <a href="https://www.linkedin.com/in/zahidhernandezmejia" target="_blank">
+    <img src="https://img.shields.io/badge/LINKEDIN-00F7F7?style=for-the-badge&logo=linkedin&logoColor=0D1117&labelColor=00F7F7" alt="LinkedIn"/>
+  </a>
 
-  <div style="display: grid; grid-template-columns: repeat(2, auto); gap: 12px; justify-content: center; margin-top: 20px;">
+  <br/><br/>
 
-    <a href="mailto:zahidhernandezmejia@gmail.com" target="_blank">
-      <img src="https://img.shields.io/badge/EMAIL-00F7F7?style=for-the-badge&logo=gmail&logoColor=0D1117&labelColor=00F7F7" alt="Email"/>
-    </a>
+  <!-- Segunda fila -->
+  <a href="https://github.com/ZahidHM" target="_blank">
+    <img src="https://img.shields.io/badge/GITHUB-00F7F7?style=for-the-badge&logo=github&logoColor=0D1117&labelColor=00F7F7" alt="GitHub"/>
+  </a>
+  <a href="https://portfolio.zahid.dev" target="_blank">
+    <img src="https://img.shields.io/badge/PORTFOLIO-00F7F7?style=for-the-badge&logo=vercel&logoColor=0D1117&labelColor=00F7F7" alt="Portfolio"/>
+  </a>
 
-    <a href="https://www.linkedin.com/in/zahidhernandezmejia" target="_blank">
-      <img src="https://img.shields.io/badge/LINKEDIN-00F7F7?style=for-the-badge&logo=linkedin&logoColor=0D1117&labelColor=00F7F7" alt="LinkedIn"/>
-    </a>
-
-    <a href="https://github.com/ZahidHM" target="_blank">
-      <img src="https://img.shields.io/badge/GITHUB-00F7F7?style=for-the-badge&logo=github&logoColor=0D1117&labelColor=00F7F7" alt="GitHub"/>
-    </a>
-
-    <a href="https://portfolio.zahid.dev" target="_blank">
-      <img src="https://img.shields.io/badge/PORTFOLIO-00F7F7?style=for-the-badge&logo=vercel&logoColor=0D1117&labelColor=00F7F7" alt="Portfolio"/>
-    </a>
-
-  </div>
 </div>
 
 <br><br>
