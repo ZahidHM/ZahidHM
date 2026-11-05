@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/tron-cat.svg" width="100%" alt="Un gato conduciendo una moto de luz de Tron"/></p>
+<p align="center"><img src="assets/tron-cat.svg?v=3" width="100%" alt="Un gato conduciendo una moto de luz de Tron"/></p>
 
 <div align="center">
 
@@ -83,7 +83,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=2000&color=00F7F7&center=true&vCenter=true&width=650&lines=SYSTEM+READY+FOR+NEW+CONNECTIONS;TRANSMISSION+SECURE;AWAITING+NEXT+COMMAND..." alt="Contact Animation" /> 
 </div>
 <div align="center">  
-  <img src="assets/snake.svg" width="100%" alt="Contribution grid"/>  
+  <img src="assets/snake.svg?v=3" width="100%" alt="Contribution grid"/>  
 </div>
 
 
