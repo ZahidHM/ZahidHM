@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/tron-cat.svg" width="100%" alt="Un gato conduciendo una moto de luz de Tron"/></p>
+
 <div align="center">
 
 <img src="assets/tron-banner.svg" alt="Zahid Hernandez Mejia" width="100%" />

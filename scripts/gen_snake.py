@@ -28,15 +28,15 @@ cells = ''
 for i, (w, d) in enumerate(order):
     day = weeks[w]['contributionDays'][d]; col = LEVELS.get(day['contributionLevel'], LEVELS['NONE']); t = i / N
     x, y = PAD + w * (C + G), TOP + d * (C + G)
-    anim = ''
-    if day['contributionLevel'] != 'NONE':
-        anim = f'<animate attributeName="fill" dur="{DUR:.1f}s" repeatCount="indefinite" values="{col};{col};{LEVELS["NONE"]};{LEVELS["NONE"]}" keyTimes="0;{t:.4f};{min(t + 0.004, 1):.4f};1"/>'
+    # toda celda se "come": destello al pasar la cabeza y luego desaparece (también las vacías, para que se note el recorrido)
+    e = min(t + 0.003, 1); f = min(t + 0.03, 1)
+    anim = f'<animate attributeName="fill" dur="{DUR:.1f}s" repeatCount="indefinite" values="{col};{col};#ffffff;#0D1117;#0D1117" keyTimes="0;{t:.4f};{e:.4f};{f:.4f};1"/>'
     cells += f'<rect x="{x}" y="{y}" width="{C}" height="{C}" rx="2.5" fill="{col}">{anim}</rect>'
 
 # cuerpo de la serpiente (cabeza + segmentos con retraso)
-SEG = 7; snake = ''
+SEG = 12; snake = ''
 for k in range(SEG):
-    size = C - 1 - k * 0.35; fill = CY if k == 0 else f'{CY}'; op = 1 - k * 0.11
+    size = C - 1 - k * 0.35; fill = CY if k == 0 else f'{CY}'; op = 1 - k * 0.06
     delay = -(k * 0.05)
     snake += (f'<rect width="{size:.1f}" height="{size:.1f}" x="{-size / 2:.1f}" y="{-size / 2:.1f}" rx="3" fill="{fill if k else "#ffffff"}" opacity="{op:.2f}" filter="url(#g)">'
               f'<animateMotion dur="{DUR:.1f}s" repeatCount="indefinite" begin="{delay}s" path="{d_attr}" calcMode="linear"/></rect>')
