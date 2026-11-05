@@ -17,17 +17,21 @@ cols = len(weeks); W = PAD * 2 + cols * (C + G) - G; H = TOP + 7 * (C + G) - G +
 cx = lambda w: PAD + w * (C + G) + C / 2
 cy = lambda d: TOP + d * (C + G) + C / 2
 
-# recorrido en serpentina: columna a columna, bajando y subiendo
-path_pts, order = [], []
-for w, wk in enumerate(weeks):
-    days = list(range(len(wk['contributionDays'])))
-    if w % 2: days.reverse()
-    for d in days: path_pts.append((cx(w), cy(d))); order.append((w, d))
-N = len(path_pts)
-INTRO, STEP, HOLD = 4.0, 0.12, 3.0                 # aparición de stats, segundos por celda, pausa final
-RUN = N * STEP; T = INTRO + RUN + HOLD
+# la serpiente va directa de contribución en contribución (por la rejilla), sin recorrer las celdas vacías
+order = [(w, d) for w, wk in enumerate(weeks) for d in range(len(wk['contributionDays']))]
+targets = [(w, d) for w, d in order if weeks[w]['contributionDays'][d]['contributionLevel'] != 'NONE']
+N = len(order)
+x, y = PAD - 24, cy(targets[0][1]) if targets else cy(3)
+pts = [(x, y)]; dist = [0.0]; hit = {}
+for w, d in targets:
+    for nx, ny in ((cx(w), y), (cx(w), cy(d))):       # primero en horizontal, luego en vertical
+        if (nx, ny) != (x, y): dist.append(dist[-1] + abs(nx - x) + abs(ny - y)); pts.append((nx, ny)); x, y = nx, ny
+    hit[(w, d)] = dist[-1]
+pts.append((W - PAD + 24, y)); dist.append(dist[-1] + (W - PAD + 24 - x)); LEN = dist[-1]
+d_attr = 'M' + ' L'.join(f'{px:.1f} {py:.1f}' for px, py in pts)
+INTRO, HOLD, STEP = 4.0, 3.0, 0.18                  # aparición de stats, pausa final, segundos por celda (15 px)
+SPEED = (C + G) / STEP; RUN = LEN / SPEED; T = INTRO + RUN + HOLD
 fa, fb = INTRO / T, (INTRO + RUN) / T               # fracciones del ciclo en que empieza/acaba el recorrido
-d_attr = 'M' + ' L'.join(f'{x:.1f} {y:.1f}' for x, y in path_pts)
 
 def build(P):
     BG, WH, NO, CY, OR = P['bg'], P['ink'], P['none'], P['cy'], P['orr']
@@ -37,7 +41,7 @@ def build(P):
     for i, (w, d) in enumerate(order):
         day = weeks[w]['contributionDays'][d]; col = LVL.get(day['contributionLevel'], P['none'])
         x, y = PAD + w * (C + G), TOP + d * (C + G)
-        ta = 0.01 + (w / cols) * (fa - 0.02); te = fa + (i / N) * (fb - fa)
+        ta = 0.01 + (w / cols) * (fa - 0.02); te = fa + hit.get((w, d), 0) / LEN * (fb - fa)
         if day['contributionLevel'] != 'NONE': eaten_at.append(te)
         if day['contributionLevel'] != 'NONE':   # la contribución se "come": destello y queda vacía
             anim = (f'<animate attributeName="fill" dur="{T:.1f}s" repeatCount="indefinite" values="{BG};{BG};{col};{col};{WH};{NO};{NO}" '
