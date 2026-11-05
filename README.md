@@ -8,9 +8,9 @@
 
 </div>
 
----
+<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
 
-## ⚡ LANGUAGES & TECHNOLOGIES
+<div align="center"><img src="assets/h-languages.svg" alt="Languages & Technologies" width="100%" /></div>
 
 <div align="center">
 
@@ -18,36 +18,33 @@
 
 <img src="https://skillicons.dev/icons?i=react,ts,js,tailwind,css" alt="Frontend Technologies" />
 
-| SYSTEM | STATUS | PROTOCOL |
-|--------|--------|----------|
-| **React** | `ONLINE` | Component Architecture |
-| **TypeScript** | `ONLINE` | Type Safety Layer |
-| **JavaScript** | `ONLINE` | Core Runtime |
-| **Tailwind CSS** | `ONLINE` | Utility Framework |
-| **CSS** | `ONLINE` | Style Engine |
+<img src="assets/bars-frontend.svg" alt="frontend technologies" width="100%" />
 
 ### 『 MOBILE 』
 
 <img src="https://skillicons.dev/icons?i=react" alt="React Native" />
 
-| SYSTEM | STATUS | PROTOCOL |
-|--------|--------|----------|
-| **React Native** | `ONLINE` | Cross-Platform Mobile |
+<img src="assets/bars-mobile.svg" alt="mobile technologies" width="100%" />
 
 ### 『 BACKEND 』
 
 <img src="https://skillicons.dev/icons?i=nodejs,laravel" alt="Backend Technologies" />
 
-| SYSTEM | STATUS | PROTOCOL |
-|--------|--------|----------|
-| **Node.js** | `ONLINE` | Server Runtime |
-| **Laravel** | `ONLINE` | PHP Framework |
+<img src="assets/bars-backend.svg" alt="backend technologies" width="100%" />
 
 </div>
 
----
+<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
 
-## 🌐 NETWORK STATISTICS
+<div align="center"><img src="assets/h-projects.svg" alt="Active projects" width="100%" />
+
+<img src="assets/project-arqeo.svg" alt="ARQEO" width="100%" />
+
+</div>
+
+<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
+
+<div align="center"><img src="assets/h-network.svg" alt="Network statistics" width="100%" /></div>
 
 <div align="center">
 
@@ -57,7 +54,7 @@
 
 </div>
 
----
+<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
 
 
 <br/>
