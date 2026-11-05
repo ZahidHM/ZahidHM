@@ -8,9 +8,9 @@
 
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
+<div align="center"><img src="assets/divider-d.svg" alt="" width="100%" /></div>
 
-<div align="center"><img src="assets/h-languages.svg" alt="Languages & Technologies" width="100%" /></div>
+<div align="center"><img src="assets/h-languages-d.svg" alt="Languages & Technologies" width="100%" /></div>
 
 <div align="center">
 
@@ -34,17 +34,17 @@
 
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
+<div align="center"><img src="assets/divider-d.svg" alt="" width="100%" /></div>
 
-<div align="center"><img src="assets/h-projects.svg" alt="Active projects" width="100%" />
+<div align="center"><img src="assets/h-projects-d.svg" alt="Active projects" width="100%" />
 
 <img src="assets/project-arqeo.svg" alt="ARQEO" width="100%" />
 
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
+<div align="center"><img src="assets/divider-d.svg" alt="" width="100%" /></div>
 
-<div align="center"><img src="assets/h-network.svg" alt="Network statistics" width="100%" /></div>
+<div align="center"><img src="assets/h-network-d.svg" alt="Network statistics" width="100%" /></div>
 
 <div align="center">
 
@@ -53,7 +53,7 @@
 
 </div>
 
-<div align="center"><img src="assets/divider.svg" alt="" width="100%" /></div>
+<div align="center"><img src="assets/divider-d.svg" alt="" width="100%" /></div>
 
 
 <br/>
