@@ -5,7 +5,7 @@ import json, os, subprocess
 
 USER = os.environ.get('PROFILE_USER', 'ZahidHM')
 CY, OR = '#00F7F7', '#FF6A00'
-LEVELS = {'NONE': '#101a21', 'FIRST_QUARTER': '#073b40', 'SECOND_QUARTER': '#0a6f74', 'THIRD_QUARTER': '#00b5b5', 'FOURTH_QUARTER': CY}
+LEVELS = {'NONE': '#101a21', 'FIRST_QUARTILE': '#073b40', 'SECOND_QUARTILE': '#0a6f74', 'THIRD_QUARTILE': '#00b5b5', 'FOURTH_QUARTILE': CY}
 Q = '''query($u:String!){user(login:$u){contributionsCollection{contributionCalendar{weeks{contributionDays{contributionLevel date}}}}}}'''
 weeks = json.loads(subprocess.check_output(['gh', 'api', 'graphql', '-f', f'query={Q}', '-f', f'u={USER}'], text=True))['data']['user']['contributionsCollection']['contributionCalendar']['weeks']
 
