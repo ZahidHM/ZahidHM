@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Genera assets/snake.svg: la serpiente recorre tu calendario de contribuciones (datos reales vía `gh`) con el estilo HUD/Tron.
+"""Genera assets/snake-grid.svg: la serpiente recorre tu calendario de contribuciones (datos reales vía `gh`) con el estilo HUD/Tron.
 Sin dependencias externas ni Actions: `python scripts/gen_snake.py`."""
 import json, os, subprocess
 
@@ -59,5 +59,5 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="1
 <text x="{W / 2}" y="32" text-anchor="middle" font-family='"Segoe UI",Arial,sans-serif' font-weight="700" font-size="17" letter-spacing="6" fill="#fff" filter="url(#g)">CONTRIBUTION GRID</text>
 <text x="{W / 2}" y="46" text-anchor="middle" font-family='"Consolas","Courier New",monospace' font-size="9" letter-spacing="4" fill="{OR}">SNAKE // CONSUMING DATA</text>
 {cells}{snake}</svg>'''
-os.makedirs('assets', exist_ok=True); open('assets/snake.svg', 'w', encoding='utf8').write(svg)
+os.makedirs('assets', exist_ok=True); open('assets/snake-grid.svg', 'w', encoding='utf8').write(svg)
 print('snake ok', cols, 'semanas', N, 'celdas', f'{T:.0f}s', len(svg) // 1024, 'KB')

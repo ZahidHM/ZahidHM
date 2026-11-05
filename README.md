@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/tron-banner.svg?v=4" alt="Zahid Hernandez Mejia" width="100%" />
+<img src="assets/banner-grid.svg" alt="Zahid Hernandez Mejia" width="100%" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=00F7F7&center=true&vCenter=true&width=940&lines=FULL+STACK+DEVELOPER;BUILDING+THE+DIGITAL+FRONTIER;END+OF+LINE" alt="Typing SVG" />
 
@@ -81,7 +81,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=2000&color=00F7F7&center=true&vCenter=true&width=650&lines=SYSTEM+READY+FOR+NEW+CONNECTIONS;TRANSMISSION+SECURE;AWAITING+NEXT+COMMAND..." alt="Contact Animation" /> 
 </div>
 <div align="center">  
-  <img src="assets/snake.svg?v=4" width="100%" alt="Contribution grid"/>  
+  <img src="assets/snake-grid.svg" width="100%" alt="Contribution grid"/>  
 </div>
 
 
