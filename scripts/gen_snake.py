@@ -20,26 +20,35 @@ for w, wk in enumerate(weeks):
     days = list(range(len(wk['contributionDays'])))
     if w % 2: days.reverse()
     for d in days: path_pts.append((cx(w), cy(d))); order.append((w, d))
-N = len(path_pts); DUR = max(18, N * 0.05)       # segundos por vuelta
+N = len(path_pts)
+INTRO, STEP, HOLD = 3.0, 0.12, 3.0                 # aparición de stats, segundos por celda, pausa final
+RUN = N * STEP; T = INTRO + RUN + HOLD
+fa, fb = INTRO / T, (INTRO + RUN) / T               # fracciones del ciclo en que empieza/acaba el recorrido
 d_attr = 'M' + ' L'.join(f'{x:.1f} {y:.1f}' for x, y in path_pts)
+BG = '#0D1117'; WH = '#ffffff'
 
-# celdas: se "comen" cuando pasa la cabeza
-cells = ''
+# celdas: aparecen primero (en cascada por columna) y luego la serpiente se las come
+cells = ''; eaten_at = []                           # instantes (fracción) en que se come cada contribución
 for i, (w, d) in enumerate(order):
-    day = weeks[w]['contributionDays'][d]; col = LEVELS.get(day['contributionLevel'], LEVELS['NONE']); t = i / N
+    day = weeks[w]['contributionDays'][d]; col = LEVELS.get(day['contributionLevel'], LEVELS['NONE'])
     x, y = PAD + w * (C + G), TOP + d * (C + G)
-    # toda celda se "come": destello al pasar la cabeza y luego desaparece (también las vacías, para que se note el recorrido)
-    e = min(t + 0.003, 1); f = min(t + 0.03, 1)
-    anim = f'<animate attributeName="fill" dur="{DUR:.1f}s" repeatCount="indefinite" values="{col};{col};#ffffff;#0D1117;#0D1117" keyTimes="0;{t:.4f};{e:.4f};{f:.4f};1"/>'
-    cells += f'<rect x="{x}" y="{y}" width="{C}" height="{C}" rx="2.5" fill="{col}">{anim}</rect>'
+    ta = 0.01 + (w / cols) * (fa - 0.02); te = fa + (i / N) * (fb - fa)
+    if day['contributionLevel'] != 'NONE': eaten_at.append(te)
+    anim = (f'<animate attributeName="fill" dur="{T:.1f}s" repeatCount="indefinite" values="{BG};{BG};{col};{col};{WH};{BG};{BG}" '
+            f'keyTimes="0;{ta:.4f};{ta + 0.012:.4f};{te:.4f};{te + 0.002:.4f};{te + 0.012:.4f};1"/>')
+    cells += f'<rect x="{x}" y="{y}" width="{C}" height="{C}" rx="2.5" fill="{BG}">{anim}</rect>'
 
-# cuerpo de la serpiente (cabeza + segmentos con retraso)
-SEG = 12; snake = ''
+# serpiente: empieza corta y crece con cada contribución que se come
+BASE = 6; SEG = BASE + min(len(eaten_at), 30); snake = ''; dt = STEP
 for k in range(SEG):
-    size = C - 1 - k * 0.35; fill = CY if k == 0 else f'{CY}'; op = 1 - k * 0.06
-    delay = -(k * 0.05)
-    snake += (f'<rect width="{size:.1f}" height="{size:.1f}" x="{-size / 2:.1f}" y="{-size / 2:.1f}" rx="3" fill="{fill if k else "#ffffff"}" opacity="{op:.2f}" filter="url(#g)">'
-              f'<animateMotion dur="{DUR:.1f}s" repeatCount="indefinite" begin="{delay}s" path="{d_attr}" calcMode="linear"/></rect>')
+    size = max(C - 1 - k * 0.2, 6); op = max(1 - k * 0.025, .45)
+    t0 = fa + k * dt / T
+    if k >= BASE: t0 = max(t0, eaten_at[k - BASE] + 0.002)
+    t1 = min(fb + (k + 1) * dt / T, 0.995)
+    kt = f'0;{t0:.4f};{t0 + 0.0005:.4f};{t1:.4f};{t1 + 0.0005:.4f};1'
+    snake += (f'<rect width="{size:.1f}" height="{size:.1f}" x="{-size / 2:.1f}" y="{-size / 2:.1f}" rx="3" fill="{WH if k == 0 else CY}" opacity="0" filter="url(#g)">'
+              f'<animate attributeName="opacity" dur="{T:.1f}s" repeatCount="indefinite" values="0;0;{op:.2f};{op:.2f};0;0" keyTimes="{kt}"/>'
+              f'<animateMotion dur="{T:.1f}s" repeatCount="indefinite" begin="{-k * dt}s" path="{d_attr}" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;{fa:.4f};{fb:.4f};1"/></rect>')
 
 b = 22
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%" role="img" aria-label="Contribution grid de {USER}">
@@ -51,4 +60,4 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="1
 <text x="{W / 2}" y="46" text-anchor="middle" font-family='"Consolas","Courier New",monospace' font-size="9" letter-spacing="4" fill="{OR}">SNAKE // CONSUMING DATA</text>
 {cells}{snake}</svg>'''
 os.makedirs('assets', exist_ok=True); open('assets/snake.svg', 'w', encoding='utf8').write(svg)
-print('snake ok', cols, 'semanas', N, 'celdas', f'{DUR:.0f}s', len(svg) // 1024, 'KB')
+print('snake ok', cols, 'semanas', N, 'celdas', f'{T:.0f}s', len(svg) // 1024, 'KB')
