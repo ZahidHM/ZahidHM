@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Genera assets/snake-grid.svg: la serpiente recorre tu calendario de contribuciones (datos reales vía `gh`) con el estilo HUD/Tron.
+"""Genera assets/snake-hud.svg: la serpiente recorre tu calendario de contribuciones (datos reales vía `gh`) con el estilo HUD/Tron.
 Sin dependencias externas ni Actions: `python scripts/gen_snake.py`."""
 import json, os, subprocess
 
 USER = os.environ.get('PROFILE_USER', 'ZahidHM')
 CY, OR = '#00F7F7', '#FF6A00'
-LEVELS = {'NONE': '#101a21', 'FIRST_QUARTILE': '#073b40', 'SECOND_QUARTILE': '#0a6f74', 'THIRD_QUARTILE': '#00b5b5', 'FOURTH_QUARTILE': CY}
+LEVELS = {'NONE': '#16232b', 'FIRST_QUARTILE': '#0b5a62', 'SECOND_QUARTILE': '#0f9aa0', 'THIRD_QUARTILE': '#19d9d9', 'FOURTH_QUARTILE': CY}
 Q = '''query($u:String!){user(login:$u){contributionsCollection{contributionCalendar{weeks{contributionDays{contributionLevel date}}}}}}'''
 weeks = json.loads(subprocess.check_output(['gh', 'api', 'graphql', '-f', f'query={Q}', '-f', f'u={USER}'], text=True))['data']['user']['contributionsCollection']['contributionCalendar']['weeks']
 
@@ -21,7 +21,7 @@ for w, wk in enumerate(weeks):
     if w % 2: days.reverse()
     for d in days: path_pts.append((cx(w), cy(d))); order.append((w, d))
 N = len(path_pts)
-INTRO, STEP, HOLD = 3.0, 0.12, 3.0                 # aparición de stats, segundos por celda, pausa final
+INTRO, STEP, HOLD = 4.0, 0.12, 3.0                 # aparición de stats, segundos por celda, pausa final
 RUN = N * STEP; T = INTRO + RUN + HOLD
 fa, fb = INTRO / T, (INTRO + RUN) / T               # fracciones del ciclo en que empieza/acaba el recorrido
 d_attr = 'M' + ' L'.join(f'{x:.1f} {y:.1f}' for x, y in path_pts)
@@ -59,5 +59,5 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="1
 <text x="{W / 2}" y="32" text-anchor="middle" font-family='"Segoe UI",Arial,sans-serif' font-weight="700" font-size="17" letter-spacing="6" fill="#fff" filter="url(#g)">CONTRIBUTION GRID</text>
 <text x="{W / 2}" y="46" text-anchor="middle" font-family='"Consolas","Courier New",monospace' font-size="9" letter-spacing="4" fill="{OR}">SNAKE // CONSUMING DATA</text>
 {cells}{snake}</svg>'''
-os.makedirs('assets', exist_ok=True); open('assets/snake-grid.svg', 'w', encoding='utf8').write(svg)
+os.makedirs('assets', exist_ok=True); open('assets/snake-hud.svg', 'w', encoding='utf8').write(svg)
 print('snake ok', cols, 'semanas', N, 'celdas', f'{T:.0f}s', len(svg) // 1024, 'KB')

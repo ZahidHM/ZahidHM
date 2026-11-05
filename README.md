@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/banner-grid.svg" alt="Zahid Hernandez Mejia" width="100%" />
+<img src="assets/banner-tron.svg" alt="Zahid Hernandez Mejia" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=00F7F7&center=true&vCenter=true&width=940&lines=FULL+STACK+DEVELOPER;BUILDING+THE+DIGITAL+FRONTIER;END+OF+LINE" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=00F7F7&background=0D1117&center=true&vCenter=true&width=940&lines=FULL+STACK+DEVELOPER;BUILDING+THE+DIGITAL+FRONTIER;END+OF+LINE" alt="Typing SVG" />
 
 
 
@@ -78,10 +78,10 @@
     <img src="https://img.shields.io/badge/PORTFOLIO-00F7F7?style=for-the-badge&logo=vercel&logoColor=0D1117&labelColor=00F7F7" alt="Portfolio"/>
   </a>
 <br><br>
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=2000&color=00F7F7&center=true&vCenter=true&width=650&lines=SYSTEM+READY+FOR+NEW+CONNECTIONS;TRANSMISSION+SECURE;AWAITING+NEXT+COMMAND..." alt="Contact Animation" /> 
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=2000&color=00F7F7&background=0D1117&center=true&vCenter=true&width=650&lines=SYSTEM+READY+FOR+NEW+CONNECTIONS;TRANSMISSION+SECURE;AWAITING+NEXT+COMMAND..." alt="Contact Animation" /> 
 </div>
 <div align="center">  
-  <img src="assets/snake-grid.svg" width="100%" alt="Contribution grid"/>  
+  <img src="assets/snake-hud.svg" width="100%" alt="Contribution grid"/>  
 </div>
 
 
